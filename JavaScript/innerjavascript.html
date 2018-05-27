@@ -1,0 +1,42 @@
+<html>
+
+<head> 
+    
+    <title>Inner JavaScript </title>
+    
+    
+</head>
+<body>
+    
+    <p id="text"> This is a Paragraph </p>
+    <button id="button"> Click Me to change text</button>
+    <p id="text2">
+    This is appended text --->
+    </p>
+    <button id=button2>Click me to append text </button>
+    
+    <p id="text3"> This text will be styled </p>
+    
+    <button id=button3>Click me to append text </button>
+    
+    
+    
+    <script type="text/javascript">
+    
+    document.getElementById('text').innerHTML="hiiiiiiii";
+    document.getElementById('button').onclick=function(){
+        document.getElementById('text').innerHTML="bye";
+    }
+    document.getElementById('button2').onclick=function(){
+        document.getElementById('text2').innerHTML= document.getElementById('text2').innerHTML +"bye";
+    }
+    document.getElementById('button3').onclick=function(){
+        document.getElementById('text3').style.color='red';
+        document.getElementById('text3').style.fontSize="24px";
+        
+    }
+    </script>
+    </body>
+    
+
+</html>
