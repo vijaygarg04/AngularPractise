@@ -1,0 +1,25 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+
+<div style="text-align:center">
+  <h1>
+    {{mymsg}}
+  </h1>
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+
+  
+</div>
+<app-child (childEvent)='logmsg($event)' [parentdata]='name' [p1]='name1'></app-child> 
+        <!-- Parent to child Data Transfer -->
+<!-- 1. bind the variables to child tag
+     2. use input decorators to access the variables 
+    3. use the value provided in the component -->
+
+    <!-- CHILD TO PARENT DATA TRANSFER -->
+    <!-- USE events to tranfer data from child to parent as no parent tag is available in child
+    1. use event emitter to emit the event import event emitter from angular core
+  2. use output decorator to send event emitter and import output as well
+3. emit the variable where ever required 
+4. in parent register the event from the child tag-->

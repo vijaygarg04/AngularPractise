@@ -1,0 +1,33 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<!-- Pipes Used to format data before displaying it in the view -->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <h1>{{name | lowercase }}</h1>
+  <h1>{{name | uppercase }}</h1>
+  <h1>{{name | titlecase }}</h1>
+  <h1>{{name | slice:3:5 }}</h1>
+  <h1>{{person | json }}</h1>
+  <!-- first digit for minimum no of digit before decimal  
+    2nd for minimum no. of digits after decimal
+  3rd for maximum no. of digits after decimal 
+  round off the data if required -->
+
+  <h1>{{5.678 | number:'3.1-2'}}</h1>
+  <h1>{{0.25  | percent}}</h1>
+  <h1>{{0.25  | currency:'EUR'}}</h1>
+  <h1>{{date1 | date}}</h1>
+  <h1>{{date1 | date:'short'}}</h1>
+  <h1>{{date1 | date:'shortDate'}}</h1>
+  <h1>{{date1 | date:'shortTime'}}</h1>
+  
+</div>
+
+<!-- Dependency Injection is used to passed parameters in constructor 
+  rather than creating new objects in constructor
+  But it increases testing overheads.
+  injector used to register all dependency
+  
+ -->

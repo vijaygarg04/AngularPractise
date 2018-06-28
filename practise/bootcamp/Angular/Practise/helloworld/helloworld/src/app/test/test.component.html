@@ -1,0 +1,40 @@
+<!-- String Interpolation -->
+
+<p>
+  {{name}}
+</p>
+<h1>{{name.length}}</h1>
+<h2>{{name.toLowerCase()}}</h2>
+<h3>{{greetuser()}}</h3>
+<!-- Property Binding -->
+
+<input type="text" [id]="myid" value="VIJAY">
+<input type="text" [disabled]="mydisabled" value="GARG">
+
+<!-- Class Binding -->
+<h2 class="text-success">VIJAY GARG</h2>
+
+<h2 [class]="successclass">VIJAY GARG</h2>
+<!-- When both ways are applied inner class is omitted itself -->
+<h2 class="text-special" [class]="successclass">VIJAY GARG</h2>
+<!-- apply class based on some conditions -->
+<h2 [class.text-danger]="hasError">VIJAY GARG</h2>
+<!-- attach multiple classes based on conditions -->
+<h2 [ngClass]="messageSpecial">VIJAY GARG</h2>
+
+<!-- STYLE BINDING -->
+<h2 [style.color]="'orange'">VIJAY GARG!!</h2>
+<h2 [style.color]="hasError?'red':'green'">VIJAY GARG!!</h2>
+<h2 [style.color]="specialcolor">VIJAY GARG!!</h2>
+<h2 [ngStyle]="customstyles">VIJAY GARG!!!!</h2>
+
+<!-- EVENT BINDING -->
+<button (click)="greetnow($event)" >GREET NOW </button>
+
+<!-- TEMPLETE REFERENCE VARIABLE -->
+<input #myid type="text">
+<button (click)="showinput($event,myid.value)">TEMPLETE</button>
+<!-- TWO WAY BINDING -->
+<!-- MUST INCLUDE FORMSMODULE IN APP>MODULE FILE -->
+<input [(ngModel)]="name1" type="text">
+<p>{{name1}}</p>
